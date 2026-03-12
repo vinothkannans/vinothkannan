@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-serif' });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +19,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const items = [
+    {
+      href: "/",
+      label: "Home",
+    },
+    {
+      href: "/about",
+      label: "About",
+    },
+    {
+      href: "/contact",
+      label: "Contact",
+    },
+  ];
   return (
-    <html lang="en" className={cn("font-sans", inter.variable)} suppressHydrationWarning>
+    <html lang="en" className={cn("font-sans", inter.variable, dmSans.variable)} suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"
@@ -25,6 +42,32 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <header className="sticky top-0 z-50 w-full bg-background mt-2">
+            <div className="container-wrapper px-6 3xl:fixed:px-0">
+              <div className="flex h-(--header-height) items-center **:data-[slot=separator]:h-4! 3xl:fixed:container">
+                <Link href="/" className="text-xl mr-4 font-serif">Vinoth Kannan</Link>
+                <nav className={cn("items-center gap-0 mt-1", "")}>
+                  {items.map((item) => (
+                    <Button
+                      key={item.href}
+                      variant="ghost"
+                      asChild
+                      size="sm"
+                      className="px-2.5"
+                    >
+                      <Link
+                        href={item.href}
+                        data-active={"false" === item.href}
+                        className="relative items-center"
+                      >
+                        {item.label}
+                      </Link>
+                    </Button>
+                  ))}
+                </nav>
+              </div>
+            </div>
+          </header>
           {children}
         </ThemeProvider>
       </body>
