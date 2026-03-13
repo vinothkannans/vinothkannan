@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="@container/main">
-      <div className="grid grid-flow-row-dense grid-cols-1 @xl/main:grid-cols-2 @3xl/main:grid-cols-3 @5xl/main:grid-cols-4 p-4">
+      <div className="grid gap-4 grid-flow-row-dense grid-cols-1 @xl/main:grid-cols-2 @3xl/main:grid-cols-3 @5xl/main:grid-cols-4 p-4">
         <Card className="relative pt-0">
           <Image
             src="/avatar.png"
@@ -28,6 +28,11 @@ export default function Home() {
               </Link>
             </Button>
           </CardFooter>
+        </Card>
+        <Card className="p-0 col-span-2">
+          <CardContent className="px-0 grayscale hover:grayscale-0 transition duration-2000">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1K4q1b3-aXaQHuYZRwG9dh7IE-5Sj4Bs&ehbc=2E312F&noprof=1" width="100%" height="430"></iframe>
+          </CardContent>
         </Card>
       </div>
     </div>
