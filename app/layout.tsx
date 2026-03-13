@@ -5,6 +5,10 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider"
 import Link from "next/link";
 import { ModeToggle } from "@/components/mode-toggle";
+import { TooltipProvider } from "@/components/ui/tooltip"
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { SiteHeader } from "@/components/site-header";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -27,24 +31,22 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="min-h-screen flex flex-col justify-between">
-            <header className="sticky top-0 z-50 w-full bg-background py-2 shadow-xs">
-              <div className="container-wrapper px-6 3xl:fixed:px-0">
-                <div className="flex h-(--header-height) items-center **:data-[slot=separator]:h-4! 3xl:fixed:container">
-                  <Link href="/" className="text-xl mr-auto font-semibold">Vinoth Kannan</Link>
-                  <ModeToggle />
-                </div>
-              </div>
-            </header>
-            {children}
-            <footer className="sticky bottom-0 z-50 w-full py-2">
-              <div className="container-wrapper px-6 3xl:fixed:px-0">
-                <div className="flex h-(--header-height) items-center **:data-[slot=separator]:h-4! 3xl:fixed:container">
-                  <p className="text-sm mx-auto text-center text-muted-foreground">&copy; 2026 Vinoth Kannan. All rights reserved.</p>
-                </div>
-              </div>
-            </footer>
-          </div>
+          <TooltipProvider>
+            <SidebarProvider
+              style={
+                {
+                  "--sidebar-width": "calc(var(--spacing) * 72)",
+                  "--header-height": "calc(var(--spacing) * 12)",
+                } as React.CSSProperties
+              }
+            >
+              <AppSidebar variant="inset" />
+              <SidebarInset>
+                <SiteHeader />
+                {children}
+              </SidebarInset>
+            </SidebarProvider>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
