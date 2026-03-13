@@ -1,9 +1,35 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { MailIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-2 text-center py-10">
-      <h1 className="text-3xl">Hey! I'm Vinoth Kannan</h1>
-      <p>Software Engineer from India</p>
+    <div className="@container/main">
+      <div className="grid grid-flow-row-dense grid-cols-1 @xl/main:grid-cols-2 @3xl/main:grid-cols-3 @5xl/main:grid-cols-4 p-4">
+        <Card className="relative pt-0">
+          <Image
+            src="/avatar.jpg"
+            alt="Avatar"
+            width={2448}
+            height={3264}
+            className="relative z-20 aspect-square w-full object-cover"
+          />
+          <CardHeader>
+            <CardTitle className="text-2xl">Hey! I'm Vinoth</CardTitle>
+            <CardDescription>Software Engineer from India</CardDescription>
+          </CardHeader>
+          <CardFooter>
+            <Button asChild>
+              <Link href="mailto:hello@vinothkannan.com" className="w-full">
+                <MailIcon />
+                Say Hello
+              </Link>
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
     </div>
   );
 }
