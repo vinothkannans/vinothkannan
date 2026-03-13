@@ -10,10 +10,10 @@ export default function Home() {
       <div className="grid grid-flow-row-dense grid-cols-1 @xl/main:grid-cols-2 @3xl/main:grid-cols-3 @5xl/main:grid-cols-4 p-4">
         <Card className="relative pt-0">
           <Image
-            src="/avatar.jpg"
+            src="/avatar.png"
             alt="Avatar"
-            width={2448}
-            height={3264}
+            width={600}
+            height={800}
             className="relative z-20 aspect-square w-full object-cover"
           />
           <CardHeader>
