@@ -1,4 +1,7 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { SiChessdotcom, SiChessdotcomHex, SiInstagram } from "@icons-pack/react-simple-icons";
+import { SwordsIcon, UserPlusIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -6,9 +9,35 @@ export default function Home() {
       <div className="grid gap-4 grid-flow-row-dense grid-cols-1 @xl/main:grid-cols-2 @3xl/main:grid-cols-3 @5xl/main:grid-cols-4 p-4">
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Hey! I'm Vinoth 👋</CardTitle>
-            <CardDescription>Software Engineer from India</CardDescription>
+            <CardTitle>Hey! Welcome 👋</CardTitle>
+            <CardDescription>I'm Vinoth, a Software Engineer from Madurai, India.</CardDescription>
           </CardHeader>
+        </Card>
+        <Card>
+          <CardContent className="flex flex-col gap-2">
+            <div className="flex justify-between">
+              <a href="https://instagram.com/vinothkannans" target="_blank" className="flex items-center gap-2">
+                <SiInstagram className={`h-4 w-4 fill-[#FF0069]`} /> Instagram
+              </a>
+              <Button variant="secondary" size="xs" asChild>
+                <a href="https://instagram.com/vinothkannans" target="_blank">
+                  <UserPlusIcon />
+                  Follow
+                </a>
+              </Button>
+            </div>
+            <div className="flex justify-between">
+              <a href="https://chess.com/member/vinothkannans" target="_blank" className="flex items-center gap-2">
+                <SiChessdotcom className={`h-4 w-4 fill-[#81B64C]`} /> Chess.com
+              </a>
+              <Button variant="secondary" size="xs" asChild>
+                <a href="https://chess.com/play/vinothkannans" target="_blank">
+                  <SwordsIcon />
+                  Play
+                </a>
+              </Button>
+            </div>
+          </CardContent>
         </Card>
         <Card className="p-0 col-span-4">
           <CardContent className="px-0 h-full min-h-96">
@@ -20,6 +49,6 @@ export default function Home() {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </div >
   );
 }
