@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import VisitedCountries from "@/components/visited-countries";
 import { SiChessdotcom, SiChessdotcomHex, SiInstagram } from "@icons-pack/react-simple-icons";
 import { SwordsIcon, UserPlusIcon } from "lucide-react";
 
@@ -39,13 +40,18 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-        <Card className="p-0 col-span-4">
-          <CardContent className="px-0 h-full min-h-96">
-            <iframe
+        <Card className="col-span-4 pb-0">
+          <CardHeader>
+            <CardTitle>Visited Countries</CardTitle>
+            <CardDescription>I've visited these countries so far.</CardDescription>
+          </CardHeader>
+          <CardContent className="p-0">
+            <VisitedCountries />
+            {/* <iframe
               src="https://www.google.com/maps/d/embed?mid=1K4q1b3-aXaQHuYZRwG9dh7IE-5Sj4Bs&ehbc=2E312F&noprof=1"
               width="100%"
               height="100%">
-            </iframe>
+            </iframe> */}
           </CardContent>
         </Card>
       </div>
