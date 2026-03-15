@@ -14,7 +14,7 @@ export default function Home() {
             <CardDescription>I'm Vinoth, a Software Engineer from Madurai, India.</CardDescription>
           </CardHeader>
         </Card>
-        <Card>
+        <Card className="grayscale hover:grayscale-0 transition duration-1000">
           <CardContent className="flex flex-col gap-2">
             <div className="flex justify-between">
               <a href="https://instagram.com/vinothkannans" target="_blank" className="flex items-center gap-2">

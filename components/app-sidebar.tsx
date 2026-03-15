@@ -30,7 +30,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   alt="Avatar"
                   width={600}
                   height={800}
-                  className="relative z-20 aspect-square w-full object-cover"
+                  className="relative z-20 aspect-square w-full object-cover grayscale hover:grayscale-0 transition duration-2000"
                 />
               </Link>
             </SidebarMenuButton>
