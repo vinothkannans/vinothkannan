@@ -40,8 +40,8 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-        <Card className="col-span-4 pb-0">
-          <CardHeader>
+        <Card className="relative @xl/main:col-span-2 @3xl/main:col-span-3 @5xl/main:col-span-4 p-0">
+          <CardHeader className="absolute left-0 top-0 w-full p-4 z-10">
             <CardTitle>Visited Countries</CardTitle>
             <CardDescription>I've visited these countries so far.</CardDescription>
           </CardHeader>

@@ -90,13 +90,20 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  /* --accent */
   --map-region: oklch(0.97 0 0);
-  --map-region-hover: oklch(50% 0.134 242.748);
-  --map-region-selected: oklch(39.1% 0.09 240.875);
-  --map-region-disabled: oklch(55.4% 0.046 257.417);
-  --map-region-stroke: oklch(0.922 0 0);
-  --map-region-stroke-hover: oklch(28.2% 0.091 267.935);
-  --map-region-focus-ring: oklch(70.7% 0.165 254.624);
+  /* --secondary */
+  --map-region-hover: oklch(0.967 0.001 286.375);
+  /* --primary */
+  --map-region-selected: oklch(0.488 0.243 264.376);
+  /* --card */
+  --map-region-disabled: oklch(1 0 0);
+  /* --card */
+  --map-region-stroke: oklch(1 0 0);
+  /* --border */
+  --map-region-stroke-hover: oklch(0.922 0 0);
+  /* --ring */
+  --map-region-focus-ring: oklch(0.708 0 0);
   --map-label: oklch(100% 0 0);
   --map-label-hover: oklch(100% 0 0);
   --map-label-selected: oklch(100% 0 0);
@@ -134,12 +141,19 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  /* --background */
   --map-region: oklch(0.145 0 0);
+  /* --secondary */
   --map-region-hover: oklch(0.274 0.006 286.033);
+  /* --primary */
   --map-region-selected: oklch(0.424 0.199 265.638);
+  /* --card */
   --map-region-disabled: oklch(0.205 0 0);
+  /* --card */
   --map-region-stroke: oklch(0.205 0 0);
+  /* --border */
   --map-region-stroke-hover: oklch(1 0 0 / 10%);
+  /* --ring */
   --map-region-focus-ring: oklch(0.556 0 0);
   --map-label: oklch(100% 0 0);
   --map-label-hover: oklch(100% 0 0);
