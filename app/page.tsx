@@ -1,3 +1,4 @@
+import GitHubContributionGraph from "@/components/github-contribution-graph";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import VisitedCountries from "@/components/visited-countries";
@@ -14,6 +15,7 @@ export default function Home() {
             <CardDescription>I'm Vinoth, a Software Engineer from Madurai, India.</CardDescription>
           </CardHeader>
         </Card>
+        <GitHubContributionGraph />
         <Card className="grayscale hover:grayscale-0 transition duration-1000">
           <CardContent className="flex flex-col gap-2">
             <div className="flex justify-between">
