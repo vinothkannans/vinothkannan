@@ -1,7 +1,8 @@
+import GitHubContributionGraph from "@/components/github-contribution-graph";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import VisitedCountries from "@/components/visited-countries";
-import { SiChessdotcom, SiChessdotcomHex, SiInstagram } from "@icons-pack/react-simple-icons";
+import { SiChessdotcom, SiGithub, SiInstagram } from "@icons-pack/react-simple-icons";
 import { SwordsIcon, UserPlusIcon } from "lucide-react";
 
 export default function Home() {
@@ -13,6 +14,28 @@ export default function Home() {
             <CardTitle>Hey! Welcome 👋</CardTitle>
             <CardDescription>I'm Vinoth, a Software Engineer from Madurai, India.</CardDescription>
           </CardHeader>
+        </Card>
+        <Card className="@xl/main:col-span-2 @3xl/main:col-span-3 @5xl/main:col-span-4">
+          <CardHeader>
+            <CardTitle>
+              <a href="https://github.com/vinothkannans" target="_blank" className="flex items-center gap-2">
+                <SiGithub className="h-4 w-4" />
+                GitHub
+              </a>
+            </CardTitle>
+            <CardDescription>My open source contribution graph for the last year.</CardDescription>
+            <CardAction>
+              <Button variant="outline" size="xs" asChild>
+                <a href="https://github.com/vinothkannans" target="_blank">
+                  <UserPlusIcon />
+                  Follow
+                </a>
+              </Button>
+            </CardAction>
+          </CardHeader>
+          <CardContent>
+            <GitHubContributionGraph />
+          </CardContent>
         </Card>
         <Card className="grayscale hover:grayscale-0 transition duration-1000">
           <CardContent className="flex flex-col gap-2">
