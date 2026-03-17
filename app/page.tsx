@@ -23,7 +23,6 @@ export default function Home() {
                 GitHub
               </a>
             </CardTitle>
-            <CardDescription>My open source contribution graph for the last year.</CardDescription>
             <CardAction>
               <Button variant="outline" size="xs" asChild>
                 <a href="https://github.com/vinothkannans" target="_blank">

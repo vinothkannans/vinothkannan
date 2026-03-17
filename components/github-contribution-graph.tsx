@@ -5,10 +5,13 @@ import {
   ContributionGraphBlock,
   ContributionGraphCalendar,
   ContributionGraphFooter,
+  ContributionGraphLegend,
+  ContributionGraphTotalCount,
 } from "@/components/kibo-ui/contribution-graph";
-import { cn } from "@/lib/utils";
 import type { Activity } from "@/components/kibo-ui/contribution-graph"
 import { useEffect, useState } from "react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { format } from "date-fns";
 
 type GitHubContributionsResponse = {
   contributions: Activity[]
@@ -32,24 +35,40 @@ export default function GitHubContributionGraph() {
   }, []);
 
   return (
-    <ContributionGraph data={data} className="mx-auto">
+    <ContributionGraph data={data} className="mx-auto" maxLevel={4}>
       <ContributionGraphCalendar>
         {({ activity, dayIndex, weekIndex }) => (
-          <ContributionGraphBlock
-            activity={activity}
-            className={cn(
-              'data-[level="0"]:fill-muted dark:data-[level="0"]:fill-muted',
-              'data-[level="1"]:fill-chart-2 dark:data-[level="1"]:fill-chart-2',
-              'data-[level="2"]:fill-chart-3 dark:data-[level="2"]:fill-chart-3',
-              'data-[level="3"]:fill-chart-4 dark:data-[level="3"]:fill-chart-4',
-              'data-[level="4"]:fill-chart-5 dark:data-[level="4"]:fill-chart-5'
-            )}
-            dayIndex={dayIndex}
-            weekIndex={weekIndex}
-          />
-        )}
-      </ContributionGraphCalendar>
-      <ContributionGraphFooter />
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <g>
+                <ContributionGraphBlock
+                  activity={activity}
+                  dayIndex={dayIndex}
+                  weekIndex={weekIndex}
+                />
+              </g>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="flex flex-col items-center">
+                <span className="text-xl">{activity.count}</span>
+                <span>contribution{activity.count > 1 ? "s" : null}</span>
+                <span>{format(new Date(activity.date), "EEE, MMM dd, yyyy")}</span>
+              </p>
+            </TooltipContent>
+          </Tooltip>
+        )
+        }
+      </ContributionGraphCalendar >
+      <ContributionGraphFooter>
+        <ContributionGraphTotalCount>
+          {({ totalCount, year }) => (
+            <div className="text-muted-foreground">
+              {totalCount.toLocaleString("en")} open source contributions in {year}
+            </div>
+          )}
+        </ContributionGraphTotalCount>
+        <ContributionGraphLegend />
+      </ContributionGraphFooter>
     </ContributionGraph >
   );
 }

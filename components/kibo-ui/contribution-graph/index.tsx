@@ -244,7 +244,7 @@ export const ContributionGraph = ({
   blockSize = 12,
   fontSize = 14,
   labels: labelsProp = undefined,
-  maxLevel: maxLevelProp = 4,
+  maxLevel: maxLevelProp = 5,
   style = {},
   totalCount: totalCountProp = undefined,
   weekStart = 0,
@@ -329,10 +329,13 @@ export const ContributionGraphBlock = ({
     <rect
       className={cn(
         'data-[level="0"]:fill-muted',
-        'data-[level="1"]:fill-muted-foreground/20',
-        'data-[level="2"]:fill-muted-foreground/40',
-        'data-[level="3"]:fill-muted-foreground/60',
-        'data-[level="4"]:fill-muted-foreground/80',
+        'data-[level="1"]:fill-chart-1 dark:data-[level="1"]:fill-chart-5',
+        'data-[level="2"]:fill-chart-2 dark:data-[level="2"]:fill-chart-4',
+        'data-[level="3"]:fill-chart-3 dark:data-[level="3"]:fill-chart-3',
+        'data-[level="4"]:fill-chart-4 dark:data-[level="4"]:fill-chart-2',
+        'data-[level="5"]:fill-destructive dark:data-[level="5"]:fill-chart-1',
+        'data-[level]:hover:fill-foreground dark:data-[level]:hover:fill-foreground',
+        'data-[level="0"]:hover:fill-muted-foreground dark:data-[level="0"]:hover:fill-muted-foreground',
         className
       )}
       data-count={activity.count}
@@ -456,8 +459,8 @@ export const ContributionGraphTotalCount = ({
     <div className={cn("text-muted-foreground", className)} {...props}>
       {labels.totalCount
         ? labels.totalCount
-            .replace("{{count}}", String(totalCount))
-            .replace("{{year}}", String(year))
+          .replace("{{count}}", String(totalCount))
+          .replace("{{year}}", String(year))
         : `${totalCount} activities in ${year}`}
     </div>
   );
@@ -495,10 +498,11 @@ export const ContributionGraphLegend = ({
               className={cn(
                 "stroke-[1px] stroke-border",
                 'data-[level="0"]:fill-muted',
-                'data-[level="1"]:fill-muted-foreground/20',
-                'data-[level="2"]:fill-muted-foreground/40',
-                'data-[level="3"]:fill-muted-foreground/60',
-                'data-[level="4"]:fill-muted-foreground/80'
+                'data-[level="1"]:fill-chart-1 dark:data-[level="1"]:fill-chart-5',
+                'data-[level="2"]:fill-chart-2 dark:data-[level="2"]:fill-chart-4',
+                'data-[level="3"]:fill-chart-3 dark:data-[level="3"]:fill-chart-3',
+                'data-[level="4"]:fill-chart-4 dark:data-[level="4"]:fill-chart-2',
+                'data-[level="5"]:fill-chart-5 dark:data-[level="5"]:fill-chart-1'
               )}
               data-level={level}
               height={blockSize}
