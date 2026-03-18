@@ -22,6 +22,8 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@shadcnmaps": "https://shadcnmaps.com/r/{name}.json"
+    "@shadcnmaps": "https://shadcnmaps.com/r/{name}.json",
+    "@reui": "https://reui.io/r/{style}/{name}.json",
+    "@mapcn": "https://mapcn.dev/r/{name}.json"
   }
 }

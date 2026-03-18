@@ -1,10 +1,11 @@
 import GitHubContributionGraph from "@/components/github-contribution-graph";
+import Life from "@/components/life";
 import Stack from "@/components/stack";
 import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import VisitedCountries from "@/components/visited-countries";
 import { SiChessdotcom, SiGithub, SiInstagram } from "@icons-pack/react-simple-icons";
-import { SwordsIcon, UserPlusIcon } from "lucide-react";
+import { HeartIcon, SwordsIcon, UserPlusIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
           <CardHeader>
             <CardTitle>
               <a href="https://github.com/vinothkannans" target="_blank" className="flex items-center gap-2">
-                <SiGithub className="h-4 w-4" />
+                <SiGithub />
                 GitHub
               </a>
             </CardTitle>
@@ -86,6 +87,17 @@ export default function Home() {
                 </a>
               </Button>
             </div>
+          </CardContent>
+        </Card>
+        <Card className="@xl/main:col-span-2">
+          <CardHeader>
+            <CardTitle className="flex gap-2 items-center">
+              <HeartIcon />
+              Life
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="max-h-96 overflow-y-scroll">
+            <Life />
           </CardContent>
         </Card>
         <Card className="relative @xl/main:col-span-2 @3xl/main:col-span-3 @5xl/main:col-span-4 p-0">
