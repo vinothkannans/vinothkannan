@@ -105,6 +105,14 @@ const timeline = [
   },
   {
     id: 15,
+    date: "Oct 22, 2022",
+    title: "Travelled to United Arab Emirates",
+    description: "First international family trip",
+    icon: EarthIcon,
+    tags: ["Personal", "Travel", "Family"]
+  },
+  {
+    id: 16,
     date: "Jan 23, 2024",
     title: "Company Incorporated in Singapore",
     icon: BuildingIcon,
@@ -112,14 +120,14 @@ const timeline = [
     tags: ["Work", "Business"]
   },
   {
-    id: 16,
+    id: 17,
     date: "Aug 23, 2024",
     title: "Left Discourse",
     icon: LogOutIcon,
     tags: ["Work", "Job"]
   },
   {
-    id: 17,
+    id: 18,
     date: "Jan 25, 2025",
     title: "Company Incorporated in India",
     icon: BuildingIcon,
@@ -127,14 +135,14 @@ const timeline = [
     tags: ["Work", "Business"]
   },
   {
-    id: 18,
+    id: 19,
     date: "Jan 14, 2026",
     title: "Travelled to Sri Lanka",
     icon: EarthIcon,
     tags: ["Personal", "Travel"]
   },
   {
-    id: 19,
+    id: 20,
     date: "Jan 15, 2026",
     title: "Travelled to Vietnam",
     icon: EarthIcon,

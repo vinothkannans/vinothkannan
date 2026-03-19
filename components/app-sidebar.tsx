@@ -13,7 +13,7 @@ import Logo from "@/components/logo"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "./ui/button"
-import { HistoryIcon, MailIcon, SendIcon } from "lucide-react"
+import { HistoryIcon, HomeIcon, MailIcon, SendIcon } from "lucide-react"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -66,7 +66,19 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenuItem>
                 <SidebarMenuButton
                   asChild
-                  tooltip="Say Hello"
+                  tooltip="Home"
+                  className="min-w-8"
+                >
+                  <Link href="/">
+                    <HomeIcon />
+                    <span>Home</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  asChild
+                  tooltip="Timeline"
                   className="min-w-8"
                 >
                   <Link href="/timeline">
@@ -76,18 +88,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               {/* <SidebarMenuItem>
-                <SidebarMenuButton
-                  asChild
-                  tooltip="Say Hello"
-                  className="min-w-8"
-                >
-                  <Link href="mailto:hello@vinothkannan.com">
-                    <MailIcon />
-                    <span>Say Hello</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
                 <SidebarMenuButton
                   asChild
                   tooltip="Say Hello"
