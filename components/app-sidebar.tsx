@@ -24,7 +24,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuButton
               asChild
             >
-              <Link href="/" className="h-auto p-0! shadow rounded-full">
+              <Link href="/" className="h-auto p-0! shadow rounded-full!">
                 <Image
                   src="/avatar.png"
                   alt="Avatar"
