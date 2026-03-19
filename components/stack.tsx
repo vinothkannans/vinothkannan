@@ -1,4 +1,4 @@
-import { SiCss, SiCssHex, SiDiscourse, SiDiscourseHex, SiDocker, SiDockerHex, SiFirebase, SiFirebaseHex, SiHtml5, SiHtml5Hex, SiJavascript, SiJavascriptHex, SiKotlin, SiKotlinHex, SiKubernetes, SiKubernetesHex, SiLaravel, SiLaravelHex, SiMysql, SiMysqlHex, SiNextdotjs, SiNextdotjsHex, SiNodedotjs, SiNodedotjsHex, SiPhp, SiPhpHex, SiPostgresql, SiPostgresqlHex, SiReact, SiReactHex, SiRedis, SiRedisHex, SiRuby, SiRubyHex, SiRubyonrails, SiRubyonrailsHex, SiShadcnui, SiShadcnuiHex, SiStripe, SiStripeHex, SiSwift, SiSwiftHex, SiTailwindcss, SiTailwindcssHex, SiTypescript, SiTypescriptHex, SiWordpress, SiWordpressHex } from "@icons-pack/react-simple-icons";
+import { SiAndroidstudio, SiAndroidstudioHex, SiApache, SiApacheHex, SiCss, SiCssHex, SiDiscourse, SiDiscourseHex, SiDocker, SiDockerHex, SiEmberdotjs, SiEmberdotjsHex, SiFirebase, SiFirebaseHex, SiGit, SiGitHex, SiGoogleads, SiGoogleadsHex, SiGooglecloud, SiGooglecloudHex, SiHtml5, SiHtml5Hex, SiHuggingface, SiHuggingfaceHex, SiJavascript, SiJavascriptHex, SiKotlin, SiKotlinHex, SiKubernetes, SiKubernetesHex, SiLaravel, SiLaravelHex, SiMysql, SiMysqlHex, SiNextdotjs, SiNextdotjsHex, SiNginx, SiNginxHex, SiNodedotjs, SiNodedotjsHex, SiPhp, SiPhpHex, SiPostgresql, SiPostgresqlHex, SiReact, SiReactHex, SiRedis, SiRedisHex, SiRuby, SiRubyHex, SiRubyonrails, SiRubyonrailsHex, SiShadcnui, SiShadcnuiHex, SiStripe, SiStripeHex, SiSwift, SiSwiftHex, SiTailwindcss, SiTailwindcssHex, SiTypescript, SiTypescriptHex, SiWordpress, SiWordpressHex, SiXcode, SiXcodeHex } from "@icons-pack/react-simple-icons";
 
 export default function Stack() {
   const stack = [
@@ -15,7 +15,9 @@ export default function Stack() {
     { name: "Firebase", icon: SiFirebase, color: SiFirebaseHex },
     { name: "Kubernetes", icon: SiKubernetes, color: SiKubernetesHex },
     { name: "Docker", icon: SiDocker, color: SiDockerHex },
+    { name: "Google Cloud", icon: SiGooglecloud, color: SiGooglecloudHex },
     { name: "PHP", icon: SiPhp, color: SiPhpHex },
+    { name: "Ember.js", icon: SiEmberdotjs, color: SiEmberdotjsHex },
     { name: "Node.js", icon: SiNodedotjs, color: SiNodedotjsHex },
     { name: "TypeScript", icon: SiTypescript, color: SiTypescriptHex },
     { name: "Tailwind CSS", icon: SiTailwindcss, color: SiTailwindcssHex },
@@ -26,6 +28,13 @@ export default function Stack() {
     { name: "Stripe", icon: SiStripe, color: SiStripeHex },
     { name: "HTML5", icon: SiHtml5, color: SiHtml5Hex },
     { name: "CSS", icon: SiCss, color: SiCssHex },
+    { name: "Git", icon: SiGit, color: SiGitHex },
+    { name: "Google Ads", icon: SiGoogleads, color: SiGoogleadsHex },
+    { name: "Nginx", icon: SiNginx, color: SiNginxHex },
+    { name: "Apache", icon: SiApache, color: SiApacheHex },
+    { name: "Xcode", icon: SiXcode, color: SiXcodeHex },
+    { name: "Android Studio", icon: SiAndroidstudio, color: SiAndroidstudioHex },
+    { name: "Hugging Face", icon: SiHuggingface, color: SiHuggingfaceHex },
   ]
   return (
     <div className="flex flex-wrap gap-1">

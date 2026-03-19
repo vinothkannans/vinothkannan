@@ -6,8 +6,8 @@ import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader,
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import VisitedCountries from "@/components/visited-countries";
-import { SiChessdotcom, SiGithub, SiInstagram } from "@icons-pack/react-simple-icons";
-import { HeartIcon, HistoryIcon, MailIcon, SwordsIcon, UserPlusIcon } from "lucide-react";
+import { SiChessdotcom, SiGithub, SiInstagram, SiX, SiYoutube } from "@icons-pack/react-simple-icons";
+import { BellIcon, HeartIcon, HistoryIcon, MailIcon, SwordsIcon, UserPlusIcon } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -18,8 +18,26 @@ export default function Home() {
           <CardHeader>
             <CardTitle>Hey! Welcome 👋</CardTitle>
           </CardHeader>
-          <CardContent className="text-muted-foreground">
-            <p>I'm Vinoth, a Software Engineer from Madurai, India.</p>
+          <CardContent className="text-muted-foreground text-sm/relaxed">
+            <p>
+              I&apos;m Vinoth, a Software Engineer and Founder of{" "}
+              <a
+                href="https://vinkas.com"
+                target="_blank"
+                className="text-primary font-medium hover:underline transition-all underline-offset-4"
+              >
+                Vinkas
+              </a>
+              . With over 15 years of experience and a background at{" "}
+              <a
+                href="https://discourse.org"
+                target="_blank"
+                className="text-primary font-medium hover:underline transition-all underline-offset-4"
+              >
+                Discourse
+              </a>
+              , I&apos;m now building elegant software solutions and impactful digital products from Madurai, India.
+            </p>
           </CardContent>
         </Card>
         <Card className="@5xl/main:col-span-2 grayscale hover:grayscale-0 transition duration-1000">
@@ -74,6 +92,28 @@ export default function Home() {
               </a>
               <Button variant="secondary" size="xs" asChild>
                 <a href="https://instagram.com/vinothkannans" target="_blank">
+                  <UserPlusIcon />
+                  Follow
+                </a>
+              </Button>
+            </div>
+            <div className="flex justify-between">
+              <a href="https://youtube.com/@vinothkannans" target="_blank" className="flex items-center gap-2">
+                <SiYoutube className={`h-4 w-4 fill-[#FF0000]`} /> YouTube
+              </a>
+              <Button variant="secondary" size="xs" asChild>
+                <a href="https://youtube.com/@vinothkannans" target="_blank">
+                  <BellIcon />
+                  Subscribe
+                </a>
+              </Button>
+            </div>
+            <div className="flex justify-between">
+              <a href="https://x.com/vinothkannans" target="_blank" className="flex items-center gap-2">
+                <SiX className={`h-4 w-4 fill-[#000000]`} /> X
+              </a>
+              <Button variant="secondary" size="xs" asChild>
+                <a href="https://x.com/vinothkannans" target="_blank">
                   <UserPlusIcon />
                   Follow
                 </a>
