@@ -2,10 +2,10 @@ import { SiAndroidstudio, SiAndroidstudioHex, SiApache, SiApacheHex, SiCss, SiCs
 
 export default function Stack() {
   const stack = [
-    { name: "Discourse", icon: SiDiscourse, color: SiDiscourseHex, className: "bg-white" },
+    { name: "Discourse", icon: SiDiscourse, color: SiDiscourseHex, iconClassName: "dark:fill-white!" },
     { name: "Ruby on Rails", icon: SiRubyonrails, color: SiRubyonrailsHex },
     { name: "Laravel", icon: SiLaravel, color: SiLaravelHex },
-    { name: "Next.js", icon: SiNextdotjs, color: SiNextdotjsHex, className: "bg-white" },
+    { name: "Next.js", icon: SiNextdotjs, color: SiNextdotjsHex, iconClassName: "dark:fill-white!" },
     { name: "Ruby", icon: SiRuby, color: SiRubyHex },
     { name: "React", icon: SiReact, color: SiReactHex },
     { name: "Swift", icon: SiSwift, color: SiSwiftHex },
@@ -21,7 +21,7 @@ export default function Stack() {
     { name: "Node.js", icon: SiNodedotjs, color: SiNodedotjsHex },
     { name: "TypeScript", icon: SiTypescript, color: SiTypescriptHex },
     { name: "Tailwind CSS", icon: SiTailwindcss, color: SiTailwindcssHex },
-    { name: "shadcn/ui", icon: SiShadcnui, color: SiShadcnuiHex, className: "bg-white" },
+    { name: "shadcn/ui", icon: SiShadcnui, color: SiShadcnuiHex, iconClassName: "dark:fill-white!" },
     { name: "Redis", icon: SiRedis, color: SiRedisHex },
     { name: "WordPress", icon: SiWordpress, color: SiWordpressHex },
     { name: "JavaScript", icon: SiJavascript, color: SiJavascriptHex, iconClassName: "bg-black" },

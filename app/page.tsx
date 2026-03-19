@@ -110,7 +110,7 @@ export default function Home() {
             </div>
             <div className="flex justify-between">
               <a href="https://x.com/vinothkannans" target="_blank" className="flex items-center gap-2">
-                <SiX className={`h-4 w-4 fill-[#000000]`} /> X
+                <SiX className={`h-4 w-4 fill-[#000000] dark:fill-[#ffffff]`} /> X
               </a>
               <Button variant="secondary" size="xs" asChild>
                 <a href="https://x.com/vinothkannans" target="_blank">
