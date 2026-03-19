@@ -2,10 +2,10 @@ import { SiAndroidstudio, SiAndroidstudioHex, SiApache, SiApacheHex, SiCss, SiCs
 
 export default function Stack() {
   const stack = [
-    { name: "Discourse", icon: SiDiscourse, color: SiDiscourseHex, iconClassName: "dark:fill-white!" },
+    { name: "Discourse", icon: SiDiscourse, color: SiDiscourseHex, className: "dark:fill-white!" },
     { name: "Ruby on Rails", icon: SiRubyonrails, color: SiRubyonrailsHex },
     { name: "Laravel", icon: SiLaravel, color: SiLaravelHex },
-    { name: "Next.js", icon: SiNextdotjs, color: SiNextdotjsHex, iconClassName: "dark:fill-white!" },
+    { name: "Next.js", icon: SiNextdotjs, color: SiNextdotjsHex, className: "dark:fill-white!" },
     { name: "Ruby", icon: SiRuby, color: SiRubyHex },
     { name: "React", icon: SiReact, color: SiReactHex },
     { name: "Swift", icon: SiSwift, color: SiSwiftHex },
@@ -21,10 +21,10 @@ export default function Stack() {
     { name: "Node.js", icon: SiNodedotjs, color: SiNodedotjsHex },
     { name: "TypeScript", icon: SiTypescript, color: SiTypescriptHex },
     { name: "Tailwind CSS", icon: SiTailwindcss, color: SiTailwindcssHex },
-    { name: "shadcn/ui", icon: SiShadcnui, color: SiShadcnuiHex, iconClassName: "dark:fill-white!" },
+    { name: "shadcn/ui", icon: SiShadcnui, color: SiShadcnuiHex, className: "dark:fill-white!" },
     { name: "Redis", icon: SiRedis, color: SiRedisHex },
     { name: "WordPress", icon: SiWordpress, color: SiWordpressHex },
-    { name: "JavaScript", icon: SiJavascript, color: SiJavascriptHex, iconClassName: "bg-black" },
+    { name: "JavaScript", icon: SiJavascript, color: SiJavascriptHex, className: "bg-black" },
     { name: "Stripe", icon: SiStripe, color: SiStripeHex },
     { name: "HTML5", icon: SiHtml5, color: SiHtml5Hex },
     { name: "CSS", icon: SiCss, color: SiCssHex },
@@ -39,8 +39,8 @@ export default function Stack() {
   return (
     <div className="flex flex-wrap gap-1">
       {stack.map((item) => (
-        <div key={item.name} className={`p-1.5 rounded-md ${item.className}`}>
-          <item.icon className={`h-6 w-6 ${item.iconClassName}`} style={{ fill: item.color }} />
+        <div key={item.name} className={`p-1.5 rounded-md`}>
+          <item.icon className={`h-6 w-6 ${item.className}`} style={{ fill: item.color }} />
         </div>
       ))}
     </div>
