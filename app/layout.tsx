@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -13,9 +13,13 @@ import { firebaseConfig } from "@/lib/firebase";
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: "Vinoth Kannan",
+  title: { default: "Vinoth Kannan", template: "%s | Vinoth Kannan" },
   description: "Personal website of Vinoth Kannan",
-};
+}
+
+export const viewport: Viewport = {
+  themeColor: '#1447e6',
+}
 
 export default function RootLayout({
   children,

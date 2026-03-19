@@ -1,5 +1,16 @@
 import TimelineComponent from "@/components/timeline";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}) {
+  return {
+    title: "Timeline",
+    description: "A collection of events in my life",
+  }
+}
+
 export default function Page() {
   return (
     <div className="flex flex-col gap-4 py-4">
