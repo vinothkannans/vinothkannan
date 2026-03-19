@@ -9,7 +9,7 @@ import {
   TimelineTitle,
 } from "@/components/reui/timeline"
 import { SiDiscourse } from "@icons-pack/react-simple-icons"
-import { BabyIcon, BuildingIcon, CalculatorIcon, CheckIcon, CodeIcon, ComputerIcon, GlobeIcon, KeyboardIcon, PresentationIcon, SchoolIcon, UniversityIcon, UserPenIcon } from 'lucide-react'
+import { BabyIcon, BuildingIcon, CalculatorIcon, CheckIcon, CodeIcon, ComputerIcon, GlobeIcon, KeyboardIcon, LogOutIcon, PresentationIcon, SchoolIcon, UniversityIcon, UserPenIcon } from 'lucide-react'
 
 const events = [
   {
@@ -66,6 +66,26 @@ const events = [
     title: "Joined the Discourse team",
     icon: SiDiscourse
   },
+  {
+    id: 10,
+    date: "Jan 23, 2024",
+    title: "Company Incorporated in Singapore",
+    icon: BuildingIcon,
+    description: "Vinkas Technologies Pte. Ltd."
+  },
+  {
+    id: 11,
+    date: "Aug 23, 2024",
+    title: "Left Discourse",
+    icon: LogOutIcon
+  },
+  {
+    id: 12,
+    date: "Jan 25, 2025",
+    title: "Company Incorporated in India",
+    icon: BuildingIcon,
+    description: "Vinkas Tech Private Limited"
+  },
 ]
 
 export default function Life() {
@@ -81,6 +101,7 @@ export default function Life() {
             <TimelineSeparator className="" />
             <TimelineDate>{event.date}</TimelineDate>
             <TimelineTitle>{event.title}</TimelineTitle>
+            {event.description && <TimelineContent>{event.description}</TimelineContent>}
             <TimelineIndicator className="flex size-6 border-transparent items-center justify-center">
               {event.icon && (<event.icon className="size-6 text-muted-foreground" />)}
             </TimelineIndicator>

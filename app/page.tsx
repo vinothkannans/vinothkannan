@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import VisitedCountries from "@/components/visited-countries";
 import { SiChessdotcom, SiGithub, SiInstagram } from "@icons-pack/react-simple-icons";
-import { HeartIcon, SwordsIcon, UserPlusIcon } from "lucide-react";
+import { HeartIcon, HistoryIcon, SwordsIcon, UserPlusIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -95,6 +95,13 @@ export default function Home() {
               <HeartIcon />
               Life
             </CardTitle>
+            <CardAction>
+              <Button variant="secondary" size="xs" asChild>
+                <a href="/timeline">
+                  View All
+                </a>
+              </Button>
+            </CardAction>
           </CardHeader>
           <CardContent className="max-h-96 overflow-y-scroll">
             <Life />
