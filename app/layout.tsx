@@ -3,12 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider"
-import Link from "next/link";
-import { ModeToggle } from "@/components/mode-toggle";
 import { TooltipProvider } from "@/components/ui/tooltip"
-import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
+import { FirebaseProvider } from "@/components/firebase/provider";
+import { firebaseConfig } from "@/lib/firebase";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -32,20 +32,22 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            <SidebarProvider
-              style={
-                {
-                  "--sidebar-width": "calc(var(--spacing) * 72)",
-                  "--header-height": "calc(var(--spacing) * 12)",
-                } as React.CSSProperties
-              }
-            >
-              <AppSidebar variant="inset" />
-              <SidebarInset>
-                <SiteHeader />
-                {children}
-              </SidebarInset>
-            </SidebarProvider>
+            <FirebaseProvider options={firebaseConfig}>
+              <SidebarProvider
+                style={
+                  {
+                    "--sidebar-width": "calc(var(--spacing) * 72)",
+                    "--header-height": "calc(var(--spacing) * 12)",
+                  } as React.CSSProperties
+                }
+              >
+                <AppSidebar variant="inset" />
+                <SidebarInset>
+                  <SiteHeader />
+                  {children}
+                </SidebarInset>
+              </SidebarProvider>
+            </FirebaseProvider>
           </TooltipProvider>
         </ThemeProvider>
       </body>
