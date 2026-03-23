@@ -1,4 +1,4 @@
-import { SiAndroidstudio, SiAndroidstudioHex, SiApache, SiApacheHex, SiCss, SiCssHex, SiDiscourse, SiDiscourseHex, SiDocker, SiDockerHex, SiEmberdotjs, SiEmberdotjsHex, SiFirebase, SiFirebaseHex, SiGit, SiGitHex, SiGoogleads, SiGoogleadsHex, SiGooglecloud, SiGooglecloudHex, SiHtml5, SiHtml5Hex, SiHuggingface, SiHuggingfaceHex, SiJavascript, SiJavascriptHex, SiKotlin, SiKotlinHex, SiKubernetes, SiKubernetesHex, SiLaravel, SiLaravelHex, SiMysql, SiMysqlHex, SiNextdotjs, SiNextdotjsHex, SiNginx, SiNginxHex, SiNodedotjs, SiNodedotjsHex, SiPhp, SiPhpHex, SiPostgresql, SiPostgresqlHex, SiReact, SiReactHex, SiRedis, SiRedisHex, SiRuby, SiRubyHex, SiRubyonrails, SiRubyonrailsHex, SiShadcnui, SiShadcnuiHex, SiStripe, SiStripeHex, SiSwift, SiSwiftHex, SiTailwindcss, SiTailwindcssHex, SiTypescript, SiTypescriptHex, SiWordpress, SiWordpressHex, SiXcode, SiXcodeHex } from "@icons-pack/react-simple-icons";
+import { SiAndroidstudio, SiAndroidstudioHex, SiApache, SiApacheHex, SiCss, SiCssHex, SiDiscourse, SiDiscourseHex, SiDocker, SiDockerHex, SiEmberdotjs, SiEmberdotjsHex, SiFirebase, SiFirebaseHex, SiGit, SiGitHex, SiGoogleads, SiGoogleadsHex, SiGooglecloud, SiGooglecloudHex, SiHtml5, SiHtml5Hex, SiHuggingface, SiHuggingfaceHex, SiJavascript, SiJavascriptHex, SiKotlin, SiKotlinHex, SiKubernetes, SiKubernetesHex, SiLaravel, SiLaravelHex, SiMysql, SiMysqlHex, SiNextdotjs, SiNextdotjsHex, SiNginx, SiNginxHex, SiNodedotjs, SiNodedotjsHex, SiPhotopea, SiPhotopeaHex, SiPhp, SiPhpHex, SiPostgresql, SiPostgresqlHex, SiReact, SiReactHex, SiRedis, SiRedisHex, SiRuby, SiRubyHex, SiRubyonrails, SiRubyonrailsHex, SiShadcnui, SiShadcnuiHex, SiStripe, SiStripeHex, SiSwift, SiSwiftHex, SiTailwindcss, SiTailwindcssHex, SiTypescript, SiTypescriptHex, SiWordpress, SiWordpressHex, SiXcode, SiXcodeHex } from "@icons-pack/react-simple-icons";
 
 export default function Stack() {
   const stack = [
@@ -35,6 +35,7 @@ export default function Stack() {
     { name: "Xcode", icon: SiXcode, color: SiXcodeHex },
     { name: "Android Studio", icon: SiAndroidstudio, color: SiAndroidstudioHex },
     { name: "Hugging Face", icon: SiHuggingface, color: SiHuggingfaceHex },
+    { name: "Photopea", icon: SiPhotopea, color: SiPhotopeaHex },
   ]
   return (
     <div className="flex flex-wrap gap-1">
