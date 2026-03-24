@@ -1,4 +1,4 @@
-import { SiAndroidstudio, SiAndroidstudioHex, SiApache, SiApacheHex, SiCss, SiCssHex, SiDiscourse, SiDiscourseHex, SiDocker, SiDockerHex, SiEmberdotjs, SiEmberdotjsHex, SiFirebase, SiFirebaseHex, SiGit, SiGitHex, SiGoogleads, SiGoogleadsHex, SiGooglecloud, SiGooglecloudHex, SiHtml5, SiHtml5Hex, SiHuggingface, SiHuggingfaceHex, SiJavascript, SiJavascriptHex, SiKotlin, SiKotlinHex, SiKubernetes, SiKubernetesHex, SiLaravel, SiLaravelHex, SiMysql, SiMysqlHex, SiNextdotjs, SiNextdotjsHex, SiNginx, SiNginxHex, SiNodedotjs, SiNodedotjsHex, SiPhotopea, SiPhotopeaHex, SiPhp, SiPhpHex, SiPostgresql, SiPostgresqlHex, SiReact, SiReactHex, SiRedis, SiRedisHex, SiRuby, SiRubyHex, SiRubyonrails, SiRubyonrailsHex, SiShadcnui, SiShadcnuiHex, SiStripe, SiStripeHex, SiSwift, SiSwiftHex, SiTailwindcss, SiTailwindcssHex, SiTypescript, SiTypescriptHex, SiWordpress, SiWordpressHex, SiXcode, SiXcodeHex } from "@icons-pack/react-simple-icons";
+import { SiAndroidstudio, SiAndroidstudioHex, SiApache, SiApacheHex, SiCss, SiCssHex, SiDiscourse, SiDiscourseHex, SiDocker, SiDockerHex, SiEmberdotjs, SiEmberdotjsHex, SiFigma, SiFigmaHex, SiFirebase, SiFirebaseHex, SiGit, SiGitHex, SiGoogleads, SiGoogleadsHex, SiGooglecloud, SiGooglecloudHex, SiGooglemaps, SiGooglemapsHex, SiHtml5, SiHtml5Hex, SiHuggingface, SiHuggingfaceHex, SiJavascript, SiJavascriptHex, SiKotlin, SiKotlinHex, SiKubernetes, SiKubernetesHex, SiLaravel, SiLaravelHex, SiMysql, SiMysqlHex, SiNextdotjs, SiNextdotjsHex, SiNginx, SiNginxHex, SiNodedotjs, SiNodedotjsHex, SiPhotopea, SiPhotopeaHex, SiPhp, SiPhpHex, SiPostgresql, SiPostgresqlHex, SiReact, SiReactHex, SiRedis, SiRedisHex, SiRevenuecat, SiRevenuecatHex, SiRuby, SiRubyHex, SiRubyonrails, SiRubyonrailsHex, SiShadcnui, SiShadcnuiHex, SiShopify, SiShopifyHex, SiStripe, SiStripeHex, SiSwift, SiSwiftHex, SiTailwindcss, SiTailwindcssHex, SiTypescript, SiTypescriptHex, SiWordpress, SiWordpressHex, SiXcode, SiXcodeHex } from "@icons-pack/react-simple-icons";
 
 export default function Stack() {
   const stack = [
@@ -26,6 +26,7 @@ export default function Stack() {
     { name: "WordPress", icon: SiWordpress, color: SiWordpressHex },
     { name: "JavaScript", icon: SiJavascript, color: SiJavascriptHex, className: "bg-black" },
     { name: "Stripe", icon: SiStripe, color: SiStripeHex },
+    { name: "Shopify", icon: SiShopify, color: SiShopifyHex },
     { name: "HTML5", icon: SiHtml5, color: SiHtml5Hex },
     { name: "CSS", icon: SiCss, color: SiCssHex },
     { name: "Git", icon: SiGit, color: SiGitHex },
@@ -35,7 +36,10 @@ export default function Stack() {
     { name: "Xcode", icon: SiXcode, color: SiXcodeHex },
     { name: "Android Studio", icon: SiAndroidstudio, color: SiAndroidstudioHex },
     { name: "Hugging Face", icon: SiHuggingface, color: SiHuggingfaceHex },
+    { name: "Figma", icon: SiFigma, color: SiFigmaHex },
     { name: "Photopea", icon: SiPhotopea, color: SiPhotopeaHex },
+    { name: "Google Maps", icon: SiGooglemaps, color: SiGooglemapsHex },
+    { name: "RevenueCat", icon: SiRevenuecat, color: SiRevenuecatHex },
   ]
   return (
     <div className="flex flex-wrap gap-1">
