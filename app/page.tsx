@@ -2,6 +2,7 @@ import GitHubContributionGraph from "@/components/github-contribution-graph";
 import Life from "@/components/life";
 import Stack from "@/components/stack";
 import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -57,13 +58,20 @@ export default function Home() {
               </a>
             </CardTitle>
             <CardAction>
-              <Button variant="outline" size="xs" asChild>
-                <a href="https://github.com/vinothkannans" target="_blank">
-                  <UserPlusIcon />
-                  Follow
-                </a>
-              </Button>
-              <iframe src="https://github.com/sponsors/vinothkannans/button" title="Sponsor vinothkannans" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+              <ButtonGroup>
+                <Button variant="outline" size="xs" asChild>
+                  <a href="https://github.com/vinothkannans" target="_blank">
+                    <UserPlusIcon />
+                    Follow
+                  </a>
+                </Button>
+                <Button variant="outline" size="xs" asChild>
+                  <a href="https://github.com/sponsors/vinothkannans" target="_blank">
+                    <HeartIcon stroke="#db61a2" />
+                    Sponsor
+                  </a>
+                </Button>
+              </ButtonGroup>
             </CardAction>
           </CardHeader>
           <CardContent>
