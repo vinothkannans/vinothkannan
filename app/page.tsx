@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import VisitedCountries from "@/components/visited-countries";
 import { SiChessdotcom, SiGithub, SiInstagram, SiX, SiYoutube } from "@icons-pack/react-simple-icons";
-import { BellIcon, HeartIcon, HistoryIcon, MailIcon, SwordsIcon, UserPlusIcon } from "lucide-react";
+import { BellIcon, CodeIcon, GitForkIcon, HeartIcon, HistoryIcon, MailIcon, StarIcon, SwordsIcon, UserPlusIcon } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -77,6 +77,29 @@ export default function Home() {
           <CardContent>
             <GitHubContributionGraph />
           </CardContent>
+          <CardFooter className="flex flex-col gap-2">
+            <ButtonGroup>
+              <Button variant="outline" size="xs" asChild>
+                <a href="https://github.com/vinothkannans/vinothkannan" target="_blank">
+                  <CodeIcon />
+                  Source
+                </a>
+              </Button>
+              <Button variant="outline" size="xs" asChild>
+                <a href="https://github.com/vinothkannans/vinothkannan" target="_blank">
+                  <StarIcon />
+                  Star
+                </a>
+              </Button>
+              <Button variant="outline" size="xs" asChild>
+                <a href="https://github.com/vinothkannans/vinothkannan/fork" target="_blank">
+                  <GitForkIcon />
+                  Fork
+                </a>
+              </Button>
+            </ButtonGroup>
+            <p className="text-sm text-muted-foreground">This website is open source. You can find the source code on GitHub.</p>
+          </CardFooter>
         </Card>
         <Card className="grayscale hover:grayscale-0 transition duration-1000">
           <CardHeader>
