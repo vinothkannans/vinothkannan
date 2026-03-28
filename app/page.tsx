@@ -63,6 +63,7 @@ export default function Home() {
                   Follow
                 </a>
               </Button>
+              <iframe src="https://github.com/sponsors/vinothkannans/button" title="Sponsor vinothkannans" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
             </CardAction>
           </CardHeader>
           <CardContent>
