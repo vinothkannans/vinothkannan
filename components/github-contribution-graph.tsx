@@ -22,7 +22,8 @@ const getCachedContributions = async () => {
   const url = new URL(`/v4/${username}?y=last`, 'https://github-contributions-api.jogruber.de');
   const response = await fetch(url);
   const data = (await response.json()) as GitHubContributionsResponse;
-  return data.contributions;
+  const mid = Math.ceil(data.contributions.length / 2)
+  return data.contributions.slice(mid);
 }
 
 export default function GitHubContributionGraph() {
@@ -61,13 +62,12 @@ export default function GitHubContributionGraph() {
       </ContributionGraphCalendar >
       <ContributionGraphFooter>
         <ContributionGraphTotalCount>
-          {({ totalCount, year }) => (
-            <div className="text-muted-foreground">
-              {totalCount.toLocaleString("en")} open source contributions in {year}
+          {({ totalCount }) => (
+            <div className="text-muted-foreground text-xs">
+              {totalCount.toLocaleString("en")} open source contributions in the last 6 months
             </div>
           )}
         </ContributionGraphTotalCount>
-        <ContributionGraphLegend />
       </ContributionGraphFooter>
     </ContributionGraph >
   );

@@ -1,5 +1,5 @@
 import GitHubContributionGraph from "@/components/github-contribution-graph";
-import Globe from "@/components/globe";
+import Globe from "@/components/visited/countries";
 import Life from "@/components/life";
 import Stack from "@/components/stack";
 import { Button } from "@/components/ui/button";
@@ -8,8 +8,9 @@ import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader,
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { SiChessdotcom, SiGithub, SiInstagram, SiX, SiYoutube } from "@icons-pack/react-simple-icons";
-import { BellIcon, CodeIcon, GitForkIcon, HeartIcon, HistoryIcon, MailIcon, StarIcon, SwordsIcon, UserPlusIcon } from "lucide-react";
+import { BellIcon, CodeIcon, GitForkIcon, HeartIcon, HistoryIcon, MailIcon, MapPinIcon, PlaneIcon, StarIcon, SwordsIcon, UserPlusIcon } from "lucide-react";
 import Image from "next/image";
+import VisitedCities from "@/components/visited/cities";
 
 export default function Home() {
   return (
@@ -49,7 +50,7 @@ export default function Home() {
             <Stack />
           </CardContent>
         </Card>
-        <Card className="@xl/main:col-span-2 @3xl/main:col-span-3 @5xl/main:col-span-4">
+        <Card className="@5xl/main:col-span-2">
           <CardHeader>
             <CardTitle>
               <a href="https://github.com/vinothkannans" target="_blank" className="flex items-center gap-2">
@@ -184,6 +185,23 @@ export default function Home() {
             </ScrollArea>
           </CardContent>
         </Card>
+        <Card className="relative @xl/main:col-span-2 p-0">
+          <CardHeader className="absolute left-0 top-0 w-full p-4 z-10">
+            <CardTitle className="flex gap-2 items-center">
+              <MapPinIcon />
+              Visited Places
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-0">
+            <VisitedCities />
+            {/* <VisitedCountries /> */}
+            {/* <iframe
+              src="https://www.google.com/maps/d/embed?mid=1K4q1b3-aXaQHuYZRwG9dh7IE-5Sj4Bs&ehbc=2E312F&noprof=1"
+              width="100%"
+              height="100%">
+            </iframe> */}
+          </CardContent>
+        </Card>
         <Card className="@xl/main:col-span-2">
           <CardHeader>
             <CardTitle className="flex gap-2 items-center">
@@ -222,21 +240,6 @@ export default function Home() {
           <CardFooter>
             <p style={{ margin: "0px auto" }}><a href="http://eepurl.com/jBOu-o" title="Mailchimp - email marketing made easy and fun"><span style={{ display: "inline-block", backgroundColor: "transparent", borderRadius: "4px" }}><Image className="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style={{ width: "220px", height: "40px", display: "flex", padding: "2px 0px", justifyContent: "center", alignItems: "center" }} width={220} height={40} /></span></a></p>
           </CardFooter>
-        </Card>
-        <Card className="relative @xl/main:col-span-1 @5xl/main:col-span-2 p-0">
-          <CardHeader className="absolute left-0 top-0 w-full p-4 z-10">
-            <CardTitle>Visited Cities</CardTitle>
-            <CardDescription>I've visited these cities so far.</CardDescription>
-          </CardHeader>
-          <CardContent className="p-0">
-            <Globe />
-            {/* <VisitedCountries /> */}
-            {/* <iframe
-              src="https://www.google.com/maps/d/embed?mid=1K4q1b3-aXaQHuYZRwG9dh7IE-5Sj4Bs&ehbc=2E312F&noprof=1"
-              width="100%"
-              height="100%">
-            </iframe> */}
-          </CardContent>
         </Card>
       </div>
     </div >

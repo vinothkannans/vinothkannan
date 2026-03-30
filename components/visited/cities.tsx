@@ -1,34 +1,8 @@
 "use client"
 
-import { Map, MapClusterLayer, MapMarker, MarkerContent, MarkerTooltip, useMap } from "./ui/map";
-import { useEffect } from "react";
+import { Map, MapControls, MapMarker, MarkerContent, MarkerTooltip } from "../ui/map";
 
-export function Spin() {
-  const { map, isLoaded } = useMap()
-
-  function rotateGlobe() {
-    const lng = 60;
-    const lat = 15;
-
-    if (!map) return;
-
-    map.jumpTo({
-      center: [lng, lat]
-    })
-  }
-
-  useEffect(() => {
-    if (isLoaded) {
-      rotateGlobe();
-    }
-  }, [isLoaded])
-
-  return (
-    <></>
-  )
-}
-
-export default function Globe() {
+export default function VisitedCities() {
   const livedCities = [
     {
       name: "Chennai",
@@ -261,7 +235,12 @@ export default function Globe() {
     }
   ]
   return (
-    <Map zoom={2} projection={{ type: 'globe' }} center={[78.121719, 9.919093]} className="h-160">
+    <Map zoom={1} center={[60, 20]} className="min-h-80">
+      <MapControls
+        position="bottom-right"
+        showZoom
+        showFullscreen
+      />
       {indianCities.map((city) => (
         <MapMarker key={city.name} longitude={city.longitude} latitude={city.latitude}>
           <MarkerTooltip>{city.name}</MarkerTooltip>
@@ -304,7 +283,6 @@ export default function Globe() {
           </span>
         </MarkerContent>
       </MapMarker>
-      <Spin />
     </Map>
   )
 }
