@@ -235,7 +235,7 @@ export default function VisitedCities() {
     }
   ]
   return (
-    <Map zoom={1} center={[60, 20]} className="min-h-80">
+    <Map zoom={1} center={[60, 20]} className="h-full">
       <MapControls
         position="bottom-right"
         showZoom

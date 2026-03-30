@@ -1,5 +1,4 @@
 import GitHubContributionGraph from "@/components/github-contribution-graph";
-import Globe from "@/components/visited/countries";
 import Life from "@/components/life";
 import Stack from "@/components/stack";
 import { Button } from "@/components/ui/button";
@@ -11,6 +10,7 @@ import { SiChessdotcom, SiGithub, SiInstagram, SiX, SiYoutube } from "@icons-pac
 import { BellIcon, CodeIcon, GitForkIcon, HeartIcon, HistoryIcon, MailIcon, MapPinIcon, PlaneIcon, StarIcon, SwordsIcon, UserPlusIcon } from "lucide-react";
 import Image from "next/image";
 import VisitedCities from "@/components/visited/cities";
+import VisitedCountries from "@/components/visited-countries";
 
 export default function Home() {
   return (
@@ -189,12 +189,18 @@ export default function Home() {
           <CardHeader className="absolute left-0 top-0 w-full p-4 z-10">
             <CardTitle className="flex gap-2 items-center">
               <MapPinIcon />
-              Visited Places
+              Visited Countries
             </CardTitle>
+            <CardAction>
+              <Button variant="secondary" size="xs" asChild>
+                <a href="/places">
+                  View All
+                </a>
+              </Button>
+            </CardAction>
           </CardHeader>
           <CardContent className="p-0">
-            <VisitedCities />
-            {/* <VisitedCountries /> */}
+            <VisitedCountries />
             {/* <iframe
               src="https://www.google.com/maps/d/embed?mid=1K4q1b3-aXaQHuYZRwG9dh7IE-5Sj4Bs&ehbc=2E312F&noprof=1"
               width="100%"

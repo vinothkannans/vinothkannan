@@ -13,7 +13,7 @@ import Logo from "@/components/logo"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "./ui/button"
-import { HistoryIcon, HomeIcon, MailIcon, SendIcon } from "lucide-react"
+import { HistoryIcon, HomeIcon, MailIcon, MapPinIcon, SendIcon } from "lucide-react"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -84,6 +84,18 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <Link href="/timeline">
                     <HistoryIcon />
                     <span>Timeline</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  asChild
+                  tooltip="Places"
+                  className="min-w-8"
+                >
+                  <Link href="/places">
+                    <MapPinIcon />
+                    <span>Places</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
