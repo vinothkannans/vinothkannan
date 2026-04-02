@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Generate an app token
-        id: generate-token
+        id: app-token
         uses: actions/create-github-app-token@v1
         with:
           app-id: ${{ vars.APP_ID }}
@@ -24,7 +24,7 @@ jobs:
         with:
           ref: "base"
           fetch-depth: 0
-          token: ${{ steps.generate-token.outputs.token }}
+          token: ${{ steps.app-token.outputs.token }}
       - name: Add Upstream Remote
         run: |
           git remote add upstream https://github.com/vinkashq/base.git
@@ -35,7 +35,7 @@ jobs:
           git push origin base
       - name: Create PR
         run: |
-          if [ $(git rev-parse base) != $(git rev-parse origin/main) ]; then
+          if [ -n "$(git log origin/main..base)" ]; then
             gh pr list --head base --base main --state open --json number --jq '.[0].number' | grep -q . \
               || gh pr create \
                 --title "Merge base changes" \
@@ -46,4 +46,4 @@ jobs:
             echo "No changes to merge."
           fi
         env:
-          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
