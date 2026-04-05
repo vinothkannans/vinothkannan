@@ -1,4 +1,4 @@
-import { SiAndroidstudio, SiAndroidstudioHex, SiApache, SiApacheHex, SiCss, SiCssHex, SiDiscourse, SiDiscourseHex, SiDocker, SiDockerHex, SiEmberdotjs, SiEmberdotjsHex, SiFigma, SiFigmaHex, SiFirebase, SiFirebaseHex, SiGit, SiGitHex, SiGoogleads, SiGoogleadsHex, SiGooglecloud, SiGooglecloudHex, SiGooglemaps, SiGooglemapsHex, SiHtml5, SiHtml5Hex, SiHuggingface, SiHuggingfaceHex, SiJavascript, SiJavascriptHex, SiKotlin, SiKotlinHex, SiKubernetes, SiKubernetesHex, SiLaravel, SiLaravelHex, SiMysql, SiMysqlHex, SiNextdotjs, SiNextdotjsHex, SiNginx, SiNginxHex, SiNodedotjs, SiNodedotjsHex, SiPhotopea, SiPhotopeaHex, SiPhp, SiPhpHex, SiPostgresql, SiPostgresqlHex, SiReact, SiReactHex, SiRedis, SiRedisHex, SiRevenuecat, SiRevenuecatHex, SiRuby, SiRubyHex, SiRubyonrails, SiRubyonrailsHex, SiShadcnui, SiShadcnuiHex, SiShopify, SiShopifyHex, SiStripe, SiStripeHex, SiSwift, SiSwiftHex, SiTailwindcss, SiTailwindcssHex, SiTypescript, SiTypescriptHex, SiWordpress, SiWordpressHex, SiXcode, SiXcodeHex } from "@icons-pack/react-simple-icons";
+import { SiAndroidstudio, SiAndroidstudioHex, SiApache, SiApacheHex, SiCss, SiCssHex, SiDiscourse, SiDiscourseHex, SiDocker, SiDockerHex, SiEmberdotjs, SiEmberdotjsHex, SiFigma, SiFigmaHex, SiFirebase, SiFirebaseHex, SiGit, SiGitHex, SiGoogleads, SiGoogleadsHex, SiGooglecloud, SiGooglecloudHex, SiGooglemaps, SiGooglemapsHex, SiHtml5, SiHtml5Hex, SiHuggingface, SiHuggingfaceHex, SiJavascript, SiJavascriptHex, SiKotlin, SiKotlinHex, SiKubernetes, SiKubernetesHex, SiLaravel, SiLaravelHex, SiMysql, SiMysqlHex, SiNextdotjs, SiNextdotjsHex, SiNginx, SiNginxHex, SiNodedotjs, SiNodedotjsHex, SiPhotopea, SiPhotopeaHex, SiPhp, SiPhpHex, SiPostgresql, SiPostgresqlHex, SiReact, SiReactHex, SiRedis, SiRedisHex, SiRevenuecat, SiRevenuecatHex, SiRuby, SiRubyHex, SiRubyonrails, SiRubyonrailsHex, SiShadcnui, SiShadcnuiHex, SiShopify, SiShopifyHex, SiStripe, SiStripeHex, SiSupabase, SiSupabaseHex, SiSwift, SiSwiftHex, SiTailwindcss, SiTailwindcssHex, SiTypescript, SiTypescriptHex, SiWordpress, SiWordpressHex, SiXcode, SiXcodeHex } from "@icons-pack/react-simple-icons";
 
 export default function Stack() {
   const stack = [
@@ -10,6 +10,7 @@ export default function Stack() {
     { name: "React", icon: SiReact, color: SiReactHex },
     { name: "Swift", icon: SiSwift, color: SiSwiftHex },
     { name: "Kotlin", icon: SiKotlin, color: SiKotlinHex },
+    { name: "Supabase", icon: SiSupabase, color: SiSupabaseHex },
     { name: "PostgreSQL", icon: SiPostgresql, color: SiPostgresqlHex },
     { name: "MySQL", icon: SiMysql, color: SiMysqlHex },
     { name: "Firebase", icon: SiFirebase, color: SiFirebaseHex },
