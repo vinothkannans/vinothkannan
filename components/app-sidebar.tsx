@@ -57,14 +57,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 </SidebarMenuButton>
                 <SidebarMenuButton
                   render={<Link href="https://www.upwork.com/freelancers/~0164138e7e64021691" target="_blank" className="flex justify-center" />}
-                  className="size-8 group-data-[collapsible=icon]:opacity-0 shadow-md ring-1 ring-foreground/5"
+                  className="bg-background size-8 group-data-[collapsible=icon]:opacity-0 shadow-md ring-1 ring-foreground/5"
                 >
                   <SiUpwork />
                   <span className="sr-only">Upwork</span>
                 </SidebarMenuButton>
                 <SidebarMenuButton
                   render={<Link href="mailto:hello@vinothkannan.com" className="flex justify-center" />}
-                  className="size-8 group-data-[collapsible=icon]:opacity-0 shadow-md ring-1 ring-foreground/5"
+                  className="bg-background size-8 group-data-[collapsible=icon]:opacity-0 shadow-md ring-1 ring-foreground/5"
                 >
                   <MailIcon />
                   <span className="sr-only">Send a message</span>
