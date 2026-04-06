@@ -55,7 +55,6 @@ export default function Home() {
           <CardHeader>
             <CardTitle>
               <a href="https://github.com/vinothkannans" target="_blank" className="flex items-center gap-2">
-                <SiGithub />
                 GitHub
               </a>
             </CardTitle>
@@ -76,20 +75,6 @@ export default function Home() {
             <GitHubContributionGraph />
           </CardContent>
           <CardFooter className="flex flex-col gap-2">
-            <ButtonGroup>
-              <Button variant="outline" size="xs" render={<Link href="https://github.com/vinothkannans/vinothkannan" target="_blank" />} nativeButton={false}>
-                <CodeIcon />
-                Source
-              </Button>
-              <Button variant="outline" size="xs" render={<Link href="https://github.com/vinothkannans/vinothkannan" target="_blank" />} nativeButton={false}>
-                <StarIcon />
-                Star
-              </Button>
-              <Button variant="outline" size="xs" render={<Link href="https://github.com/vinothkannans/vinothkannan/fork" target="_blank" />} nativeButton={false}>
-                <GitForkIcon />
-                Fork
-              </Button>
-            </ButtonGroup>
             <p className="text-sm text-muted-foreground">This website is open source. You can find the source code on GitHub.</p>
           </CardFooter>
         </Card>

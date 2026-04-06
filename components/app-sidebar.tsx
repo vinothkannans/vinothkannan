@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/sidebar"
 import Image from "next/image"
 import Link from "next/link"
-import { HistoryIcon, HomeIcon, MailIcon, MapPinIcon, SendIcon } from "lucide-react"
+import { BriefcaseIcon, HistoryIcon, HomeIcon, MailIcon, MapPinIcon, SendIcon } from "lucide-react"
+import { Button } from "./ui/button"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -46,21 +47,20 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenu>
               <SidebarMenuItem className="flex items-center gap-2">
                 <SidebarMenuButton
-                  render={<Link href="mailto:hello@vinothkannan.com" className="flex justify-center" />}
-                  tooltip="Say Hello"
+                  render={<Link href="mailto:vinoth.kannan@vinkas.com" className="flex justify-center" />}
+                  tooltip="Hire Me"
                   className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
                 >
-                  <MailIcon />
-                  <span>Say Hello</span>
+                  <BriefcaseIcon />
+                  <span>Hire Me</span>
                 </SidebarMenuButton>
-                {/* <Button
-                  size="icon"
-                  className="size-8 group-data-[collapsible=icon]:opacity-0"
-                  variant="outline"
+                <SidebarMenuButton
+                  render={<Link href="mailto:hello@vinothkannan.com" className="flex justify-center" />}
+                  className="size-8 group-data-[collapsible=icon]:opacity-0 shadow-md ring-1 ring-foreground/5"
                 >
-                  <SendIcon />
-                  <span className="sr-only">Inbox</span>
-                </Button> */}
+                  <MailIcon />
+                  <span className="sr-only">Send a message</span>
+                </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
             <SidebarMenu>
