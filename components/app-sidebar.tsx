@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/sidebar"
 import Image from "next/image"
 import Link from "next/link"
-import { BriefcaseIcon, HistoryIcon, HomeIcon, MailIcon, MapPinIcon, SendIcon } from "lucide-react"
+import { BriefcaseIcon, HistoryIcon, HomeIcon, LinkIcon, MailIcon, MapPinIcon, SendIcon } from "lucide-react"
 import { Button } from "./ui/button"
 import { SiUpwork } from "@icons-pack/react-simple-icons"
 
@@ -102,17 +102,17 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <span>Places</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              {/* <SidebarMenuItem>
+              <SidebarMenuItem>
                 <SidebarMenuButton
-                  render={<Link href="mailto:hello@vinothkannan.com" />}
-                  tooltip="Say Hello"
+                  render={<Link href="/links" />}
+                  tooltip="Links"
                   className="min-w-8"
                 >
-                  <MailIcon />
-                  <span>Say Hello</span>
+                  <LinkIcon />
+                  <span>Links</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              <SidebarMenuItem>
+              {/*<SidebarMenuItem>
                 <SidebarMenuButton
                   render={<Link href="mailto:hello@vinothkannan.com" />}
                   tooltip="Say Hello"

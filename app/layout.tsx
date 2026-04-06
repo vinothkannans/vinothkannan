@@ -13,7 +13,7 @@ import { firebaseConfig } from "@/lib/firebase";
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: { default: "Vinoth Kannan", template: "%s | Vinoth Kannan" },
+  title: { default: "Vinoth Kannan", template: "%s - Vinoth Kannan" },
   description: "Personal website of Vinoth Kannan",
   icons: {
     icon: [
