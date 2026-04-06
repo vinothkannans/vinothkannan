@@ -13,6 +13,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { BriefcaseIcon, HistoryIcon, HomeIcon, MailIcon, MapPinIcon, SendIcon } from "lucide-react"
 import { Button } from "./ui/button"
+import { SiUpwork } from "@icons-pack/react-simple-icons"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -53,6 +54,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 >
                   <BriefcaseIcon />
                   <span>Hire Me</span>
+                </SidebarMenuButton>
+                <SidebarMenuButton
+                  render={<Link href="https://www.upwork.com/freelancers/~0164138e7e64021691" target="_blank" className="flex justify-center" />}
+                  className="size-8 group-data-[collapsible=icon]:opacity-0 shadow-md ring-1 ring-foreground/5"
+                >
+                  <SiUpwork />
+                  <span className="sr-only">Upwork</span>
                 </SidebarMenuButton>
                 <SidebarMenuButton
                   render={<Link href="mailto:hello@vinothkannan.com" className="flex justify-center" />}
