@@ -90,7 +90,7 @@ const events = [
 
 export default function Life() {
   return (
-    <Timeline className="w-max mx-auto">
+    <Timeline className="w-max mx-auto" value={0}>
       {events.reverse().map((event) => (
         <TimelineItem
           key={event.id}
