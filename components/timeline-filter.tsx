@@ -7,13 +7,13 @@ import { useState } from "react"
 export default function TimelineFilter({ onFilterChange }: { onFilterChange: (tag: string) => void }) {
   const [selectedTag, setSelectedTag] = useState<string>("all")
 
-  const handleValueChange = (value: string) => {
-    setSelectedTag(value)
-    onFilterChange(value)
+  const handleValueChange = (value: string[]) => {
+    setSelectedTag(value[0])
+    onFilterChange(value[0])
   }
 
   return (
-    <ToggleGroup variant="outline" type="single" size="sm" defaultValue="all" className="mx-auto" value={selectedTag} onValueChange={handleValueChange}>
+    <ToggleGroup variant="outline" size="sm" defaultValue={["all"]} className="mx-auto" value={[selectedTag]} onValueChange={handleValueChange}>
       <ToggleGroupItem value="all" aria-label="Toggle all" className="text-xs text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">
         All
       </ToggleGroupItem>

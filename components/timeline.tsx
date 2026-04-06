@@ -29,7 +29,7 @@ export default function TimelineComponent() {
   return (
     <div className="flex flex-col gap-6">
       <TimelineFilter onFilterChange={handleFilterChange} />
-      <Timeline className="w-full max-w-xl mx-auto">
+      <Timeline className="w-full max-w-xl mx-auto" value={0}>
         {filteredTimeline.map((event) => (
           <TimelineItem
             key={event.id}

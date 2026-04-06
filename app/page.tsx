@@ -11,6 +11,7 @@ import { BellIcon, CodeIcon, GitForkIcon, HeartIcon, HistoryIcon, MailIcon, MapP
 import Image from "next/image";
 import VisitedCities from "@/components/visited/cities";
 import VisitedCountries from "@/components/visited-countries";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -60,17 +61,13 @@ export default function Home() {
             </CardTitle>
             <CardAction>
               <ButtonGroup>
-                <Button variant="outline" size="xs" asChild>
-                  <a href="https://github.com/vinothkannans" target="_blank">
-                    <UserPlusIcon />
-                    Follow
-                  </a>
+                <Button variant="outline" size="xs" render={<Link href="https://github.com/vinothkannans" target="_blank" />} nativeButton={false}>
+                  <UserPlusIcon />
+                  Follow
                 </Button>
-                <Button variant="outline" size="xs" asChild>
-                  <a href="https://github.com/sponsors/vinothkannans" target="_blank">
-                    <HeartIcon stroke="#db61a2" />
-                    Sponsor
-                  </a>
+                <Button variant="outline" size="xs" render={<Link href="https://github.com/sponsors/vinothkannans" target="_blank" />} nativeButton={false}>
+                  <HeartIcon stroke="#db61a2" />
+                  Sponsor
                 </Button>
               </ButtonGroup>
             </CardAction>
@@ -80,23 +77,17 @@ export default function Home() {
           </CardContent>
           <CardFooter className="flex flex-col gap-2">
             <ButtonGroup>
-              <Button variant="outline" size="xs" asChild>
-                <a href="https://github.com/vinothkannans/vinothkannan" target="_blank">
-                  <CodeIcon />
-                  Source
-                </a>
+              <Button variant="outline" size="xs" render={<Link href="https://github.com/vinothkannans/vinothkannan" target="_blank" />} nativeButton={false}>
+                <CodeIcon />
+                Source
               </Button>
-              <Button variant="outline" size="xs" asChild>
-                <a href="https://github.com/vinothkannans/vinothkannan" target="_blank">
-                  <StarIcon />
-                  Star
-                </a>
+              <Button variant="outline" size="xs" render={<Link href="https://github.com/vinothkannans/vinothkannan" target="_blank" />} nativeButton={false}>
+                <StarIcon />
+                Star
               </Button>
-              <Button variant="outline" size="xs" asChild>
-                <a href="https://github.com/vinothkannans/vinothkannan/fork" target="_blank">
-                  <GitForkIcon />
-                  Fork
-                </a>
+              <Button variant="outline" size="xs" render={<Link href="https://github.com/vinothkannans/vinothkannan/fork" target="_blank" />} nativeButton={false}>
+                <GitForkIcon />
+                Fork
               </Button>
             </ButtonGroup>
             <p className="text-sm text-muted-foreground">This website is open source. You can find the source code on GitHub.</p>
@@ -112,55 +103,45 @@ export default function Home() {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="h-4 w-4 fill-[#0077B5]"><path d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z" /></svg>
                 LinkedIn
               </a>
-              <Button variant="secondary" size="xs" asChild>
-                <a href="https://linkedin.com/in/vinothkannans" target="_blank">
-                  <UserPlusIcon />
-                  Connect
-                </a>
+              <Button variant="secondary" size="xs" render={<Link href="https://linkedin.com/in/vinothkannans" target="_blank" />} nativeButton={false}>
+                <UserPlusIcon />
+                Connect
               </Button>
             </div>
             <div className="flex justify-between">
               <a href="https://instagram.com/vinothkannans" target="_blank" className="flex items-center gap-2">
                 <SiInstagram className={`h-4 w-4 fill-[#FF0069]`} /> Instagram
               </a>
-              <Button variant="secondary" size="xs" asChild>
-                <a href="https://instagram.com/vinothkannans" target="_blank">
-                  <UserPlusIcon />
-                  Follow
-                </a>
+              <Button variant="secondary" size="xs" render={<Link href="https://instagram.com/vinothkannans" target="_blank" />} nativeButton={false}>
+                <UserPlusIcon />
+                Follow
               </Button>
             </div>
             <div className="flex justify-between">
               <a href="https://youtube.com/@vinothkannans" target="_blank" className="flex items-center gap-2">
                 <SiYoutube className={`h-4 w-4 fill-[#FF0000]`} /> YouTube
               </a>
-              <Button variant="secondary" size="xs" asChild>
-                <a href="https://youtube.com/@vinothkannans" target="_blank">
-                  <BellIcon />
-                  Subscribe
-                </a>
+              <Button variant="secondary" size="xs" render={<Link href="https://youtube.com/@vinothkannans" target="_blank" />} nativeButton={false}>
+                <BellIcon />
+                Subscribe
               </Button>
             </div>
             <div className="flex justify-between">
               <a href="https://x.com/vinothkannans" target="_blank" className="flex items-center gap-2">
                 <SiX className={`h-4 w-4 fill-[#000000] dark:fill-[#ffffff]`} /> X
               </a>
-              <Button variant="secondary" size="xs" asChild>
-                <a href="https://x.com/vinothkannans" target="_blank">
-                  <UserPlusIcon />
-                  Follow
-                </a>
+              <Button variant="secondary" size="xs" render={<Link href="https://x.com/vinothkannans" target="_blank" />} nativeButton={false}>
+                <UserPlusIcon />
+                Follow
               </Button>
             </div>
             <div className="flex justify-between">
               <a href="https://chess.com/member/vinothkannans" target="_blank" className="flex items-center gap-2">
                 <SiChessdotcom className={`h-4 w-4 fill-[#81B64C]`} /> Chess.com
               </a>
-              <Button variant="secondary" size="xs" asChild>
-                <a href="https://chess.com/play/vinothkannans" target="_blank">
-                  <SwordsIcon />
-                  Play
-                </a>
+              <Button variant="secondary" size="xs" render={<Link href="https://chess.com/play/vinothkannans" target="_blank" />} nativeButton={false}>
+                <SwordsIcon />
+                Play
               </Button>
             </div>
           </CardContent>
@@ -172,15 +153,13 @@ export default function Home() {
               Life
             </CardTitle>
             <CardAction>
-              <Button variant="secondary" size="xs" asChild>
-                <a href="/timeline">
-                  View All
-                </a>
+              <Button variant="secondary" size="xs" render={<Link href="/timeline" />} nativeButton={false}>
+                View All
               </Button>
             </CardAction>
           </CardHeader>
           <CardContent>
-            <ScrollArea className="h-48" type="always">
+            <ScrollArea className="h-48">
               <Life />
             </ScrollArea>
           </CardContent>
@@ -192,10 +171,8 @@ export default function Home() {
               Visited Countries
             </CardTitle>
             <CardAction>
-              <Button variant="secondary" size="xs" asChild>
-                <a href="/places">
-                  View All
-                </a>
+              <Button variant="secondary" size="xs" render={<Link href="/places" />} nativeButton={false}>
+                View All
               </Button>
             </CardAction>
           </CardHeader>
@@ -248,6 +225,6 @@ export default function Home() {
           </CardFooter>
         </Card>
       </div>
-    </div >
+    </div>
   );
 }

@@ -9,10 +9,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import Logo from "@/components/logo"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "./ui/button"
 import { HistoryIcon, HomeIcon, MailIcon, MapPinIcon, SendIcon } from "lucide-react"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -22,17 +20,22 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
-              asChild
+              render={<Link href="/" className="relative group h-full p-0! shadow rounded-full!" />}
             >
-              <Link href="/" className="h-auto p-0! shadow rounded-full!">
-                <Image
-                  src="/avatar.png"
-                  alt="Avatar"
-                  width={600}
-                  height={800}
-                  className="relative z-20 aspect-square w-full object-cover grayscale hover:grayscale-0 transition duration-2000"
-                />
-              </Link>
+              <Image
+                src="/avatar-gray.png"
+                alt="Avatar"
+                width={617}
+                height={986}
+                className="z-21 aspect-square w-full object-cover group-hover:opacity-0 group-active:opacity-0 group-focus:opacity-0 group-focus-within:opacity-0 transition duration-2000"
+              />
+              <Image
+                src="/avatar-color.png"
+                alt="Avatar"
+                width={617}
+                height={986}
+                className="absolute z-20 aspect-square w-full object-cover"
+              />
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
@@ -43,14 +46,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenu>
               <SidebarMenuItem className="flex items-center gap-2">
                 <SidebarMenuButton
-                  asChild
+                  render={<Link href="mailto:hello@vinothkannan.com" className="flex justify-center" />}
                   tooltip="Say Hello"
                   className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
                 >
-                  <Link href="mailto:hello@vinothkannan.com" className="flex justify-center">
-                    <MailIcon />
-                    <span>Say Hello</span>
-                  </Link>
+                  <MailIcon />
+                  <span>Say Hello</span>
                 </SidebarMenuButton>
                 {/* <Button
                   size="icon"
@@ -65,74 +66,62 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton
-                  asChild
+                  render={<Link href="/" />}
                   tooltip="Home"
                   className="min-w-8"
                 >
-                  <Link href="/">
-                    <HomeIcon />
-                    <span>Home</span>
-                  </Link>
+                  <HomeIcon />
+                  <span>Home</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton
-                  asChild
+                  render={<Link href="/timeline" />}
                   tooltip="Timeline"
                   className="min-w-8"
                 >
-                  <Link href="/timeline">
-                    <HistoryIcon />
-                    <span>Timeline</span>
-                  </Link>
+                  <HistoryIcon />
+                  <span>Timeline</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton
-                  asChild
+                  render={<Link href="/places" />}
                   tooltip="Places"
                   className="min-w-8"
                 >
-                  <Link href="/places">
-                    <MapPinIcon />
-                    <span>Places</span>
-                  </Link>
+                  <MapPinIcon />
+                  <span>Places</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               {/* <SidebarMenuItem>
                 <SidebarMenuButton
-                  asChild
+                  render={<Link href="mailto:hello@vinothkannan.com" />}
                   tooltip="Say Hello"
                   className="min-w-8"
                 >
-                  <Link href="mailto:hello@vinothkannan.com">
-                    <MailIcon />
-                    <span>Say Hello</span>
-                  </Link>
+                  <MailIcon />
+                  <span>Say Hello</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton
-                  asChild
+                  render={<Link href="mailto:hello@vinothkannan.com" />}
                   tooltip="Say Hello"
                   className="min-w-8"
                 >
-                  <Link href="mailto:hello@vinothkannan.com">
-                    <MailIcon />
-                    <span>Say Hello</span>
-                  </Link>
+                  <MailIcon />
+                  <span>Say Hello</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton
-                  asChild
+                  render={<Link href="mailto:hello@vinothkannan.com" />}
                   tooltip="Say Hello"
                   className="min-w-8"
                 >
-                  <Link href="mailto:hello@vinothkannan.com">
-                    <MailIcon />
-                    <span>Say Hello</span>
-                  </Link>
+                  <MailIcon />
+                  <span>Say Hello</span>
                 </SidebarMenuButton>
               </SidebarMenuItem> */}
             </SidebarMenu>

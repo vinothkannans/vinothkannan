@@ -40,14 +40,12 @@ export default function GitHubContributionGraph() {
       <ContributionGraphCalendar>
         {({ activity, dayIndex, weekIndex }) => (
           <Tooltip>
-            <TooltipTrigger asChild>
-              <g>
-                <ContributionGraphBlock
-                  activity={activity}
-                  dayIndex={dayIndex}
-                  weekIndex={weekIndex}
-                />
-              </g>
+            <TooltipTrigger render={<g />}>
+              <ContributionGraphBlock
+                activity={activity}
+                dayIndex={dayIndex}
+                weekIndex={weekIndex}
+              />
             </TooltipTrigger>
             <TooltipContent>
               <p className="flex flex-col items-center">
