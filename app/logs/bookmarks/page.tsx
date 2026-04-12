@@ -7,7 +7,7 @@ import AppBreadcrumb from "@/components/app-breadcrumb"
 
 export async function generateMetadata() {
   return {
-    title: "Bookmarks - Logs",
+    title: "Bookmarks",
     description: "A collection of web page links I find interesting",
   }
 }

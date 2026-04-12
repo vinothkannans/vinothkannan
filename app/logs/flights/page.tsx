@@ -10,7 +10,7 @@ export async function generateMetadata({
   params: { slug: string }
 }) {
   return {
-    title: "Flights - Logs",
+    title: "Flights",
     description: "The log of flights I have taken so far",
   }
 }
