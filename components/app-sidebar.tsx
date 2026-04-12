@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/sidebar"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRightIcon, BriefcaseBusinessIcon, BriefcaseIcon, Globe2Icon, GlobeIcon, HandshakeIcon, HistoryIcon, HomeIcon, LogsIcon, MailIcon, MapPinIcon, PlaneIcon, SendIcon, UserPlus2Icon, UserPlusIcon } from "lucide-react"
+import { ArrowRightIcon, BookmarkIcon, BriefcaseBusinessIcon, BriefcaseIcon, Globe2Icon, GlobeIcon, HandshakeIcon, HistoryIcon, HomeIcon, LogsIcon, MailIcon, MapPinIcon, PlaneIcon, SendIcon, UserPlus2Icon, UserPlusIcon } from "lucide-react"
 import { Button } from "./ui/button"
 import { SiUpwork } from "@icons-pack/react-simple-icons"
 
@@ -130,6 +130,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <span>Logs</span>
                 </SidebarMenuButton>
                 <SidebarMenuSub>
+                  <SidebarMenuSubItem>
+                    <SidebarMenuSubButton
+                      render={<Link href="/logs/bookmarks" />}
+                    >
+                      <BookmarkIcon />
+                      <span>Bookmarks</span>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
                   <SidebarMenuSubItem>
                     <SidebarMenuSubButton
                       render={<Link href="/logs/flights" />}
