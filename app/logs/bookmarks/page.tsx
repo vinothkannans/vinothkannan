@@ -19,6 +19,13 @@ const links = [
     description: "Traffic.cv is a platform that helps you track your website traffic and provides insights on how to improve it.",
     icon: null,
     image: "https://traffic.cv/logo-light.svg"
+  },
+  {
+    title: "ZType",
+    url: "https://zty.pe",
+    description: "ZType is a fast and fun typing game that helps you improve your typing speed and accuracy.",
+    icon: null,
+    image: "https://zty.pe/media/favicon.png"
   }
 ]
 
