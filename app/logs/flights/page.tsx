@@ -511,6 +511,22 @@ const routes = [
     to: "TRZ",
     airlineCode: "TR",
     flightNumber: 558
+  },
+  {
+    trip: 16,
+    date: "2026-05-14",
+    from: "MAA",
+    to: "SIN",
+    airlineCode: "SQ",
+    flightNumber: 525
+  },
+  {
+    trip: 16,
+    date: "2026-05-28",
+    from: "SIN",
+    to: "MAA",
+    airlineCode: "SQ",
+    flightNumber: 524
   }
 ]
 
