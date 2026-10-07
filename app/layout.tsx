@@ -9,6 +9,7 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Analytics } from '@vercel/analytics/next';
+import { MatrixRain } from "@/components/ui/matrix-rain";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -53,6 +54,7 @@ export default function RootLayout({
                   "--header-height": "calc(var(--spacing) * 12)",
                 } as React.CSSProperties
               }
+               className="relative has-data-[variant=inset]:bg-transparent"
             >
               <AppSidebar variant="inset" />
               <SidebarInset>
@@ -60,6 +62,7 @@ export default function RootLayout({
                 {children}
                 <SiteFooter />
               </SidebarInset>
+              <MatrixRain className="absolute z-0" />
             </SidebarProvider>
           </TooltipProvider>
         </ThemeProvider>

@@ -15,7 +15,7 @@ export async function generateMetadata({
 
 export default function Page() {
   return (
-    <div className="flex flex-col gap-4 py-4">
+    <div className="flex flex-col gap-4 py-4 z-1 bg-background">
       <AppBreadcrumb>
         <BreadcrumbItem>
           <BreadcrumbPage>Timeline</BreadcrumbPage>

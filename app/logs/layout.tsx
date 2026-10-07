@@ -7,8 +7,8 @@ export async function generateMetadata() {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="bg-background h-full z-1">
       {children}
-    </>
+    </div>
   )
 }

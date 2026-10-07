@@ -182,3 +182,14 @@
     @apply hidden!;
   }
 }
+
+.group\/card {
+  @apply z-1;
+  &.bg-card {
+    @apply bg-card/95;
+  }
+}
+
+.bg-sidebar {
+  @apply bg-sidebar/95;
+}

@@ -209,7 +209,7 @@ export default function Home() {
         </Card>
         <Family />
       </div>
-      <h2 className="py-8 mb-4 font-black text-center text-[10cqw] text-transparent bg-clip-text animate-pulse bg-gradient-to-r from-muted via-border to-muted">
+      <h2 className="py-8 mb-4 z-2 relative font-black text-center text-[10cqw] text-transparent bg-clip-text animate-pulse bg-gradient-to-r from-muted via-border to-muted">
         @vinothkannans
       </h2>
     </div>
