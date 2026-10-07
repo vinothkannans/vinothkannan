@@ -58,7 +58,7 @@ export function MatrixRain({
         const drops = new Array(columns).fill(1)
 
         // Character set: Katakana + Numbers
-        const chars = "ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ1234567890"
+        const chars = "ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ1234567890தமிழ்வித்ண்இகாரீராயயானோகன்திரிக்ஜ்விசரிபிணஸ்ரீVinothKaSyPrRkjI"
 
 
 
